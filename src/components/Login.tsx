@@ -10,15 +10,15 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('student');
   const [error, setError] = useState('');
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!username.trim() || !password.trim()) {
       setError('Por favor, completa todos los campos');
       return;
     }
-    
+
     // In a real app, this would make an API call to validate credentials
     // For this demo, we'll just simulate a successful login
     onLogin(username);
@@ -28,17 +28,17 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     <div className="max-w-md mx-auto mt-8">
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         <div className="p-4 bg-indigo-900 text-white text-center">
-          <h2 className="text-xl font-bold">Bienvenido a Universidad Central</h2>
+          <h2 className="text-xl font-bold">Bienvenido a EPN</h2>
           <p className="text-indigo-200 text-sm mt-1">Por favor, inicia sesión para continuar</p>
         </div>
-        
+
         <div className="p-6">
           {error && (
             <div className="mb-4 p-3 bg-red-50 text-red-700 rounded-md text-sm">
               {error}
             </div>
           )}
-          
+
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-1">
@@ -58,7 +58,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                 />
               </div>
             </div>
-            
+
             <div className="mb-4">
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
                 Contraseña
@@ -77,7 +77,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                 />
               </div>
             </div>
-            
+
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Rol
@@ -92,7 +92,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                 <option value="staff">Personal Administrativo</option>
               </select>
             </div>
-            
+
             <div>
               <button
                 type="submit"
@@ -102,7 +102,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
               </button>
             </div>
           </form>
-          
+
           <div className="mt-4 text-center">
             <a href="#" className="text-sm text-indigo-600 hover:text-indigo-500">
               ¿Olvidaste tu contraseña?
