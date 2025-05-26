@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { User, Lock } from 'lucide-react';
+import image from '../images/logo-epn-vertical.png'; // Adjust the path as necessary
 
 interface LoginProps {
   onLogin: (username: string) => void;
@@ -28,7 +29,8 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     <div className="max-w-md mx-auto mt-8">
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         <div className="p-4 bg-indigo-900 text-white text-center">
-          <h2 className="text-xl font-bold">Bienvenido a EPN</h2>
+          <img src={image} alt="EPN Logo" className="mx-auto mb-4 h-28 w-28" />
+          <h2 className="text-xl font-bold">Bienvenido a Portal  EPN</h2>
           <p className="text-indigo-200 text-sm mt-1">Por favor, inicia sesión para continuar</p>
         </div>
 
